@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadasivuni Sai Vivek | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Background Animation (Constellation) -->
+    <canvas class="bg-animation" id="bg-canvas"></canvas>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="reveal reveal-up active">
+        <div class="nav-container">
+            <a href="#hero" class="logo">Vivek's <span>Portfolio</span></a>
+            <div class="nav-actions" style="display: flex; align-items: center; gap: 1.5rem;">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button id="theme-toggle" class="theme-btn" title="Toggle Theme"><i class="fas fa-sun"></i></button>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content reveal reveal-zoom">
+            <div class="profile-photo-container">
+                <img src="profile.jpeg" alt="Profile Photo" class="profile-photo">
+            </div>
+            <p class="greeting">Hello, I am</p>
+            <h1 class="name"><span class="highlight typing-container"><span class="typewriter-text"></span><span
+                        class="cursor"></span></span></h1>
+            <h2 class="role">Data Science Student | Machine Learning Enthusiast | Data Analyst</h2>
+            <p class="tagline">"Turning Data into Insights and Ideas into Solutions"</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary glow-effect">
+                    <i class="fas fa-project-diagram"></i> View Projects
+                </a>
+                <a href="resume.pdf" target="_blank" class="btn btn-secondary glow-effect" download>
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section reveal reveal-left">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Data-focused Computer Science student skilled in Python, Machine Learning, and Data
+                        Analytics.<br><br>
+                        Experienced in analyzing real-world datasets, building dashboards, and developing intelligent
+                        systems with strong emphasis on data-driven decision making.<br><br>
+                        Hands-on with tools like Pandas, Scikit-learn, and Power BI, with a proven ability to turn data
+                        into actionable insights.<br><br>
+                        Passionate about solving real-world problems using data and continuously improving through
+                        practical projects.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section reveal reveal-right">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-container">
+
+                <div class="skill-category">
+                    <h3>Programming</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item reveal reveal-up" data-tooltip="C / C++"><i
+                                class="devicon-cplusplus-plain colored"></i></div>
+                        <div class="skill-item reveal reveal-up" data-tooltip="Python"><i class="devicon-python-plain"
+                                style="color:#60a5fa"></i></div>
+                        <div class="skill-item reveal reveal-up" data-tooltip="SQL"><i class="fas fa-database"
+                                style="color:#00b4d8"></i></div>
+                        <div class="skill-item reveal reveal-up" style="transition-delay: 0.1s" data-tooltip="HTML5"><i
+                                class="devicon-html5-plain colored"></i></div>
+                        <div class="skill-item reveal reveal-up" style="transition-delay: 0.2s" data-tooltip="CSS3"><i
+                                class="devicon-css3-plain colored"></i></div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Data Science</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item reveal reveal-up" style="transition-delay: 0.1s" data-tooltip="Pandas">
+                            <i class="devicon-pandas-plain" style="color:#00b4d8;"></i>
+                        </div>
+                        <div class="skill-item reveal reveal-up" style="transition-delay: 0.2s" data-tooltip="NumPy"><i
+                                class="devicon-numpy-plain colored"></i></div>
+                        <div class="skill-item reveal reveal-up" style="transition-delay: 0.3s"
+                            data-tooltip="Matplotlib"><i class="fas fa-chart-line" style="color:#11557c"></i></div>
+                        <div class="skill-item reveal reveal-up" style="transition-delay: 0.4s"
+                            data-tooltip="Scikit-learn"><i class="fas fa-brain" style="color:#f7931e"></i></div>
+                        <div class="skill-item reveal reveal-up" style="transition-delay: 0.5s"
+                            data-tooltip="TensorFlow"><i class="devicon-tensorflow-original colored"></i></div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item reveal reveal-up" style="transition-delay: 0.1s" data-tooltip="Power BI">
+                            <i class="fas fa-chart-bar" style="color:#f2c811"></i>
+                        </div>
+                        <div class="skill-item reveal reveal-up" style="transition-delay: 0.2s" data-tooltip="Tableau">
+                            <i class="fas fa-chart-pie" style="color:#e97627"></i>
+                        </div>
+                        <div class="skill-item reveal reveal-up" style="transition-delay: 0.3s" data-tooltip="Excel"><i
+                                class="fas fa-file-excel" style="color:#1d6f42"></i></div>
+                        <div class="skill-item reveal reveal-up" style="transition-delay: 0.4s" data-tooltip="MySQL"><i
+                                class="devicon-mysql-plain colored"></i></div>
+                        <div class="skill-item reveal reveal-up" style="transition-delay: 0.5s"
+                            data-tooltip="Oracle DB"><i class="devicon-oracle-original colored"></i></div>
+                        <div class="skill-item reveal reveal-up" style="transition-delay: 0.6s" data-tooltip="Jupyter">
+                            <i class="devicon-jupyter-plain colored"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section reveal reveal-up">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-grid">
+
+                <div class="project-card glow-card reveal reveal-zoom">
+                    <img src="project-bot.png" alt="Photography Assistant Bot"
+                        style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem; object-fit: cover; aspect-ratio: 4/3; background: var(--surface-light); border: 1px solid rgba(255,255,255,0.05);">
+                    <div class="project-content">
+                        <h3>Photography Assistant Bot</h3>
+                        <p>Developed an AI-powered photography assistant using OpenCV and MediaPipe for real-time
+                            face/pose detection, framing suggestions, and automated capture.</p>
+                        <div class="tech-stack">
+                            <span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>Tkinter</span>
+                        </div>
+                        <a href="https://github.com/Saivivek06/Photography-Assistant-Bot" target="_blank"
+                            class="github-link"><i class="fab fa-github"></i> View Repository</a>
+                    </div>
+                </div>
+
+                <div class="project-card glow-card reveal reveal-zoom" style="transition-delay: 0.1s;">
+                    <img src="project-robot.png" alt="Black Money Transaction Analytics"
+                        style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem; object-fit: cover; aspect-ratio: 4/3; background: var(--surface-light); border: 1px solid rgba(255,255,255,0.05);">
+                    <div class="project-content">
+                        <h3>Black Money Transaction Analytics</h3>
+                        <p>Analyzed 10,000+ transactions to detect laundering patterns using Pandas and data
+                            visualization techniques.</p>
+                        <div class="tech-stack">
+                            <span>Python</span><span>Pandas</span><span>Seaborn</span><span>Matplotlib</span>
+                        </div>
+                        <a href="https://github.com/Saivivek06/Data_Visualization_using_python" target="_blank"
+                            class="github-link"><i class="fab fa-github"></i> View Repository</a>
+                    </div>
+                </div>
+
+                <div class="project-card glow-card reveal reveal-zoom" style="transition-delay: 0.2s;">
+                    <img src="project-transaction.png" alt="Fire-Fighting Robot"
+                        style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem; object-fit: cover; aspect-ratio: 4/3; background: var(--surface-light); border: 1px solid rgba(255,255,255,0.05);">
+                    <div class="project-content">
+                        <h3>Fire-Fighting Robot</h3>
+                        <p>Built an autonomous robot using Arduino that detects and extinguishes fire using sensors and
+                            automated control systems.</p>
+                        <div class="tech-stack">
+                            <span>Arduino</span><span>Sensors</span><span>Motors</span>
+                        </div>
+                        <a href="https://github.com/Saivivek06/Fire-Fighting-Robot" target="_blank"
+                            class="github-link"><i class="fab fa-github"></i> View Repository</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section reveal reveal-left">
+        <div class="container">
+            <h2 class="section-title">Experience & Training</h2>
+            <div class="timeline">
+                <div class="timeline-item glow-card">
+                    <div class="timeline-content">
+                        <h3>Walmart Sales & Billing Dashboard</h3>
+                        <ul class="bulleted"
+                            style="color: var(--text-muted); padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.95rem;">
+                            <li>Developed an interactive Excel dashboard to analyze Walmart sales data using Pivot
+                                Tables, charts, and slicers.</li>
+                            <li>Analyzed key business KPIs including Total Sales, Profit, Quantity Sold, and Order
+                                Count, enabling clear tracking of performance metrics.</li>
+                            <li>Explored trends across product categories, payment modes, time periods, and regional
+                                sales to identify high-performing areas and revenue drivers.</li>
+                            <li>Designed a user-friendly, multi-sheet dashboard to support data-driven decision-making
+                                and improve insight generation.</li>
+                        </ul>
+                        <div style="margin-top: 1.5rem;">
+                            <img src="cert-data-analytics.png" alt="Data Analytics Certificate"
+                                style="width: 100%; border-radius: 8px; margin-bottom: 1rem; object-fit: cover; aspect-ratio: 4/3; background: var(--surface-light); border: 1px solid rgba(255,255,255,0.05); display: block;">
+                            <a href="https://drive.google.com/file/d/1ouZ1ZWChypee1dXI-D2FX0tTHtwpNrJa/view?usp=sharing"
+                                target="_blank" class="github-link" style="display: inline-flex;"><i
+                                    class="fas fa-external-link-alt"></i> View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education, Certs, Achievements -->
+    <section id="education" class="education section reveal reveal-right">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="multi-grid">
+
+                <div class="info-card glow-card reveal reveal-up">
+                    <h3><i class="fas fa-university"></i> B.Tech CSE</h3>
+                    <div style="margin-top: 1rem;">
+                        <h4 style="font-size: 1.1rem; color: var(--text-main); margin-bottom: 0.5rem;">Lovely
+                            Professional University</h4>
+                        <p style="color: #c084fc; font-weight: 600; font-size: 1.1rem;">CGPA: 7.3</p>
+                    </div>
+                </div>
+
+                <div class="info-card glow-card reveal reveal-up" style="transition-delay: 0.1s;">
+                    <h3><i class="fas fa-school"></i> Intermediate</h3>
+                    <div style="margin-top: 1rem;">
+                        <h4 style="font-size: 1.1rem; color: var(--text-main); margin-bottom: 0.5rem;">Aditya Junior
+                            College</h4>
+                        <p style="color: #c084fc; font-weight: 600; font-size: 1.1rem;">Score: 85%</p>
+                    </div>
+                </div>
+
+                <div class="info-card glow-card reveal reveal-up" style="transition-delay: 0.2s;">
+                    <h3><i class="fas fa-book-reader"></i> Matriculation</h3>
+                    <div style="margin-top: 1rem;">
+                        <h4 style="font-size: 1.1rem; color: var(--text-main); margin-bottom: 0.5rem;">Subha Niketan
+                            School</h4>
+                        <p style="color: #c084fc; font-weight: 600; font-size: 1.1rem;">Score: 80%</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <h3 class="subsection-title reveal reveal-up"
+                style="margin-top: 5rem; margin-bottom: 3rem; text-align: center; font-size: 2rem; color: var(--text-main); font-family: var(--font-heading); font-weight: 700;">
+                <i class="fas fa-trophy" style="color: #f59e0b;"></i> Achievements
+            </h3>
+
+            <div class="project-grid">
+                <div class="project-card glow-card reveal reveal-zoom">
+                    <div style="display: flex; align-items: flex-start; gap: 1.5rem; padding: 1rem;">
+                        <div
+                            style="background: rgba(245, 158, 11, 0.1); padding: 1.2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; min-width: 60px; height: 60px;">
+                            <i class="fas fa-camera" style="font-size: 1.8rem; color: #f59e0b;"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.2rem; color: var(--text-main); margin-bottom: 0.5rem;">Head of Media
+                                Department</h4>
+                            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.5;">Managed 200+ events
+                                successfully, coordinating teams and multimedia operations.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glow-card reveal reveal-zoom" style="transition-delay: 0.1s;">
+                    <div style="display: flex; align-items: flex-start; gap: 1.5rem; padding: 1rem;">
+                        <div
+                            style="background: rgba(16, 185, 129, 0.1); padding: 1.2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; min-width: 60px; height: 60px;">
+                            <i class="fas fa-file-contract" style="font-size: 1.8rem; color: #10b981;"></i>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.2rem; color: var(--text-main); margin-bottom: 0.5rem;">Patent
+                                Secured</h4>
+                            <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.5;">Secured a patent
+                                right specifically for the AI Photography Assistant Bot.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Certifications Layout -->
+            <h3 class="subsection-title reveal reveal-up"
+                style="margin-top: 5rem; margin-bottom: 3rem; text-align: center; font-size: 2rem; color: var(--text-main); font-family: var(--font-heading); font-weight: 700;">
+                <i class="fas fa-certificate" style="color: var(--primary-color);"></i> Certifications
+            </h3>
+
+            <div class="project-grid">
+
+                <div class="project-card glow-card reveal reveal-zoom">
+                    <img src="cert-genai.png" alt="Generative AI Certificate"
+                        style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem; object-fit: cover; aspect-ratio: 4/3; background: var(--surface-light); border: 1px solid rgba(255,255,255,0.05);">
+                    <div class="project-content">
+                        <h3>Generative AI for Data Analytics</h3>
+                        <p>Udemy</p>
+                        <a href="https://www.udemy.com/certificate/UC-fdd41a47-b58e-4990-8ca2-6f3c5282bcd2/"
+                            target="_blank" class="github-link"><i class="fas fa-external-link-alt"></i> View
+                            Certificate</a>
+                    </div>
+                </div>
+
+                <div class="project-card glow-card reveal reveal-zoom" style="transition-delay: 0.1s;">
+                    <img src="cert-computational.png" alt="Computational Theory Certificate"
+                        style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem; object-fit: cover; aspect-ratio: 4/3; background: var(--surface-light); border: 1px solid rgba(255,255,255,0.05);">
+                    <div class="project-content">
+                        <h3>Computational Theory</h3>
+                        <p>Infosys</p>
+                        <a href="https://infyspringboard.onwingspan.com/public-assets/infosysheadstart/cert/lex_auth_0135015511562403847605/1-3d355f84-bf25-4ed3-b0cf-f65d2c004eaf.pdf"
+                            target="_blank" class="github-link"><i class="fas fa-external-link-alt"></i> View
+                            Certificate</a>
+                    </div>
+                </div>
+
+                <div class="project-card glow-card reveal reveal-zoom" style="transition-delay: 0.2s;">
+                    <img src="cert-cloud.png" alt="Cloud Computing Certificate"
+                        style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem; object-fit: cover; aspect-ratio: 4/3; background: var(--surface-light); border: 1px solid rgba(255,255,255,0.05);">
+                    <div class="project-content">
+                        <h3>Cloud Computing</h3>
+                        <p>NPTEL</p>
+                        <a href="https://archive.nptel.ac.in/content/noc/NOC25/SEM1/Ecertificates/106/noc25-cs11/Course/NPTEL25CS11S153730250904249284.pdf"
+                            target="_blank" class="github-link"><i class="fas fa-external-link-alt"></i> View
+                            Certificate</a>
+                    </div>
+                </div>
+
+                <div class="project-card glow-card reveal reveal-zoom" style="transition-delay: 0.3s;">
+                    <img src="cert-python.png" alt="Python for Data Science Certificate"
+                        style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem; object-fit: cover; aspect-ratio: 4/3; background: var(--surface-light); border: 1px solid rgba(255,255,255,0.05);">
+                    <div class="project-content">
+                        <h3>Python for Data Science</h3>
+                        <p>Board Infinity</p>
+                        <a href="https://drive.google.com/file/d/1bK1OKVFrswX2hQ02jfSFUYTYsFsfD_iz/view" target="_blank"
+                            class="github-link"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+                    </div>
+                </div>
+
+                <div class="project-card glow-card reveal reveal-zoom" style="transition-delay: 0.4s;">
+                    <img src="cert-prompt-engineering.png" alt="ChatGPT4 Prompt Engineering Certificate"
+                        style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem; object-fit: cover; aspect-ratio: 4/3; background: var(--surface-light); border: 1px solid rgba(255,255,255,0.05);">
+                    <div class="project-content">
+                        <h3>ChatGPT4 Prompt Engineering</h3>
+                        <p>Infosys</p>
+                        <a href="https://drive.google.com/file/d/12XYh7COjbt-9cj5QD9FiL0JZYpgkiDHS/view?usp=sharing"
+                            target="_blank" class="github-link"><i class="fas fa-external-link-alt"></i> View
+                            Certificate</a>
+                    </div>
+                </div>
+
+                <div class="project-card glow-card reveal reveal-zoom" style="transition-delay: 0.5s;">
+                    <img src="AIML.png" alt="AI & ML Projects Certificate"
+                        style="width: 100%; border-radius: 8px; margin-bottom: 1.5rem; object-fit: cover; aspect-ratio: 4/3; background: var(--surface-light); border: 1px solid rgba(255,255,255,0.05);">
+                    <div class="project-content">
+                        <h3>AI & ML Projects</h3>
+                        <p>Great Learning</p>
+                        <a href="https://drive.google.com/file/d/13CfYqSaQhwqTmt6Wm12IsuZSzA553Btg/view?usp=sharing"
+                            target="_blank" class="github-link"><i class="fas fa-external-link-alt"></i> View
+                            Certificate</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section reveal reveal-zoom">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-text">Currently open for new opportunities. Let's connect!</p>
+
+            <div class="social-links large">
+                <a href="mailto:saivivek0402@gmail.com" class="glow-icon" title="Email"><i
+                        class="fas fa-envelope"></i></a>
+                <a href="https://github.com/Saivivek06" target="_blank" class="glow-icon" title="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/saivivek02/" target="_blank" class="glow-icon" title="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a>
+
+                <div class="glow-icon" title="Click to show number" style="cursor: pointer; position: relative;"
+                    onclick="const p = this.querySelector('#phone-popover'); if(p.style.opacity === '0') { p.style.opacity = '1'; p.style.pointerEvents = 'auto'; p.style.bottom = '80px'; } else { p.style.opacity = '0'; p.style.pointerEvents = 'none'; p.style.bottom = '70px'; }">
+                    <i class="fas fa-phone"></i>
+                    <div id="phone-popover" class="glow-card"
+                        style="position: absolute; bottom: 70px; left: 50%; transform: translateX(-50%); padding: 0.5rem 1.2rem; border-radius: 8px; font-size: 1.1rem; font-family: var(--font-heading); font-weight: 600; white-space: nowrap; box-shadow: 0 10px 25px rgba(0,0,0,0.5); opacity: 0; pointer-events: none; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(139,92,246,0.3); z-index: 100;">
+                        <a href="tel:+919999999999" style="color: var(--text-main); text-decoration: none;">+91
+                            6304906082</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-container reveal reveal-up" style="transition-delay: 0.2s;">
+                <form class="contact-form glow-card" action="#" method="POST"
+                    onsubmit="event.preventDefault(); alert('Message feature requires a backend service (like Formspree or Netlify Forms) to send emails directly, but the UI is completely ready for it!');">
+                    <div class="form-group">
+                        <label for="name">Send a message</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Your Email"
+                            required>
+                    </div>
+                    <div class="form-group">
+
+                        <textarea id="message" name="message" class="form-control" placeholder="Your Message"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary glow-effect"
+                        style="width: 100%; justify-content: center; margin-top: 1rem; padding: 1rem; font-size: 1.1rem;">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> Sadasivuni Sai Vivek. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
